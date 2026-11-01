@@ -1,0 +1,20 @@
+class Solution {
+public:
+    bool isAnagram(string s, string t) {
+    
+        map<char, int, greater<int>> lets;
+        map<char, int, greater<int>> lett;
+        
+        for (char i : s) {
+            lets[i]+=1;
+        }
+        for (char i : t) {
+            lett[i]+=1;
+        }
+        
+        if (lets == lett ) {
+            return true;
+        }
+        return false;
+    }
+};
